@@ -11,26 +11,30 @@ from glob import glob
 from __feature__ import snake_case, true_property
 
 app = QApplication([])
-my_list = [ "None", "Sepia", "Negative",  "Grayscale", "Thumbnail" ]
+my_list = [ "Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
+list=["Palm size","3 or lower","4","5","6","7 or more"]
+list_grain=["Serving","3 or lower","4","5","6","7 or more"]
+list_veg=["1 cpu raw, 1/2 cup frozen", "3 or lower","4","5","6","7 or more"]
+list_dairy=["Ounces","1","2","3","4","5 or more"]
 class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
         label1 = QLabel('Enter nutrient info: ')
 
         self.my_combo_box = QComboBox(self)
-        self.my_combo_box.add_items(my_list)
+        self.my_combo_box.add_items(list_veg)
 
         self.my_combo_box2 = QComboBox(self)
         self.my_combo_box2.add_items(my_list)
 
         self.my_combo_box3 = QComboBox(self)
-        self.my_combo_box3.add_items(my_list)
+        self.my_combo_box3.add_items(list_dairy)
 
         self.my_combo_box4 = QComboBox(self)
-        self.my_combo_box4.add_items(my_list)
+        self.my_combo_box4.add_items(list_grain)
 
         self.my_combo_box5 = QComboBox(self)
-        self.my_combo_box5.add_items(my_list)
+        self.my_combo_box5.add_items(list)
         
         my_btn= QPushButton('Submit')
         self.my_lbl=QLabel("")
@@ -115,6 +119,12 @@ class MyWindow(QWidget):
 
     @Slot()
     def on_click(self):
+        veg_ser = self.my_combo_box.current_index
+        pro_ser = self.my_combo_box2.current_index
+        Dar_ser = self.my_combo_box3.current_index
+        Gra_ser = self.my_combo_box4.current_index
+        Fru_ser = self.my_combo_box5.current_index
+        
         return "hello"
 
 
@@ -123,11 +133,3 @@ class MyWindow(QWidget):
 win = MyWindow()
 win.show()
 sys.exit(app.exec())
-print('hello')
-
-print('Hello world')
-from other_file import my_list
-"""
-I missed up the file of other_file as I got to this part and couldn't figure out what to do next.
-"""
-print(my_list)
