@@ -16,6 +16,14 @@ list=["Palm size","3 or lower","4","5","6","7 or more"]
 list_grain=["Serving","3 or lower","4","5","6","7 or more"]
 list_veg=["1 cpu raw, 1/2 cup frozen", "3 or lower","4","5","6","7 or more"]
 list_dairy=["Ounces","1","2","3","4","5 or more"]
+class Anotherwindow(QWidget):
+    def __init__(self):
+        super().__init__()
+        layout = QVBoxLayout()
+        self.label = QLabel("Another Window")
+        layout.add_widget(self.label)
+        self.set_layout(layout)
+
 class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -124,8 +132,9 @@ class MyWindow(QWidget):
         Dar_ser = self.my_combo_box3.current_index
         Gra_ser = self.my_combo_box4.current_index
         Fru_ser = self.my_combo_box5.current_index
+        w= Anotherwindow()
+        w.show()
         
-        return "hello"
 
 
 
