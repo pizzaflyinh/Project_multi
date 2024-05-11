@@ -295,6 +295,17 @@ foodrecipes = {
             "Step 4: Stir in Gouda cheese, Cheddar cheese and cooled mushrooms mixture. Pour egg mixture into pie shell. Sprinkle Gorgonzola cheese over top. Bake 35 to 40 minutes or until center is puffed and light golden brown. Cool 10 minutes.\n"
         ]
     },
-    "Yogurt and Fruit Parfaits"
+    "Yogurt and Fruit Parfaits": {
+        "image_id":"image_id",
+        "ingredients": [
+            "3 cups vanilla nonfat yogurt",
+            "1 cup fresh or defrosted frozen strawberries in juice",
+            "1 pint fresh blackberries, raspberries or blueberries",
+            "1 cup good quality granola"
+        ],
+        "directions": [
+            "Step 1: Layer 1/3 cup vanilla yogurt into the bottom each of 4 tall glasses. Combine defrosted strawberries and juice with fresh berries. Alternate layers of fruit and granola with yogurt until glasses are filled to the top. Serve parfaits immediately to keep granola crunchy.\n"
+        ]
+    }
 }
 }
