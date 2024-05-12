@@ -12,17 +12,26 @@ from __feature__ import snake_case, true_property
 
 app = QApplication([])
 my_list = [ "Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
-list=["Palm size","3 or lower","4","5","6","7 or more"]
+list=["Palm size","1 or lower","2","3","4","5 or more"]
 list_grain=["Serving","3 or lower","4","5","6","7 or more"]
-list_veg=["1 cpu raw, 1/2 cup frozen", "3 or lower","4","5","6","7 or more"]
+list_veg=["1 cpu raw, 1/2 cup frozen", "1 or lower","2","3","4","5 or more"]
 list_dairy=["Ounces","1","2","3","4","5 or more"]
 class Anotherwindow(QWidget):
-    def __init__(self):
+    def __init__(self,ser_fru,ser_gra,ser_dar,ser_pro,ser_veg):
         super().__init__()
         layout = QVBoxLayout()
-        self.label = QLabel("Another Window")
+        self.label = QLabel("The Fruit serving are " + ser_fru)
         layout.add_widget(self.label)
+        self.label2 = QLabel("The Grain serving are " + ser_gra)
+        layout.add_widget(self.label2)
+        self.label3 = QLabel("The Dariy serving are " + ser_dar)
+        layout.add_widget(self.label3)
+        self.label4 = QLabel("The Protein serving are " + ser_pro)
+        layout.add_widget(self.label4)
+        self.label5 = QLabel("The Veggie servings are " + ser_veg)
+        layout.add_widget(self.label5)
         self.set_layout(layout)
+        self.window_title = "Results"
 
 class MyWindow(QWidget):
     def __init__(self):
@@ -132,7 +141,23 @@ class MyWindow(QWidget):
         Dar_ser = self.my_combo_box3.current_index
         Gra_ser = self.my_combo_box4.current_index
         Fru_ser = self.my_combo_box5.current_index
-        w= Anotherwindow()
+        ser_fru="Low "
+        ser_gra="Low"
+        ser_dar="Low"
+        ser_pro="Low"
+        ser_veg="Low"
+        if Fru_ser>=2:
+            ser_fru = "Good"
+        if Gra_ser >= 4:
+            ser_gra="Good"
+        if Dar_ser>= 3:
+            ser_dar="Good"
+        if pro_ser>=3:
+            ser_pro="Good"
+        if veg_ser>=2 :
+            ser_veg="Good"
+        
+        w= Anotherwindow(ser_fru,ser_gra,ser_dar,ser_pro,ser_veg)
         w.show()
         
 
