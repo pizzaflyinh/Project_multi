@@ -1,7 +1,7 @@
 foodrecipes = {
     "vegetables": {
         "Veggie-Packed Okonomiyaki": {
-            "image_id": "image_id",
+            "image_id": "veggieokonomiyaki.jpg",
             "ingredients": [
                 "¼ cup mayonnaise",
                 "1 teaspoon Sriracha",
@@ -24,7 +24,7 @@ foodrecipes = {
             ]
         },  
         "Really Green Smoothie": {
-            "image_id": "image_id",
+            "image_id": "green-smoothie.jpg",
             "ingredients": [
                 "1 large ripe banana",
                 "1 cup packed baby kale or coarsely chopped mature kale",
@@ -39,7 +39,7 @@ foodrecipes = {
             ]
         },
         "Greek Muffin-Tin Omelets with Feta & Peppers":{
-            "image_id": "image_id",
+            "image_id": "Greek-Muffin.jpg",
             "ingredients": [
                 "Cooking spray",
                 "2 tablespoons extra-virgin olive oi",
@@ -64,7 +64,7 @@ foodrecipes = {
     },
     "grains": {
         "Slow-Cooker Quinoa Salad with Arugula & Feta": {
-            "image_id": "image_id",
+            "image_id": "quinoa-salad.jpg",
             "ingredients": [
                 "2 ¼ cups unsalted vegetable stock",
                 "1 ½ cups uncooked quinoa, rinsed",
@@ -86,7 +86,7 @@ foodrecipes = {
             ]
         },
     "Smoked Turkey, Kale & Rice Bake": {
-        "image_id": "image_id",
+        "image_id": "turkey-rice-bake.jpg",
             "ingredients": [
                 "1 tablespoon extra-virgin olive oil",
                 "2 cups thinly sliced leeks, white and light green parts only",
@@ -107,7 +107,7 @@ foodrecipes = {
             ]
         },
         "Chile-Lime Veggie Noodles":{
-            "image_id": "image_id",
+            "image_id": "chile-lime-noodles.jpg",
             "ingredients": [
                 "8 ounces whole-wheat spaghetti or lo mein noodles",
                 "½ cup dry sherry",
@@ -131,9 +131,9 @@ foodrecipes = {
             ]
         }
     },
-    "protien":{
+    "protein":{
        "Sheet-Pan Roasted Salmon & Vegetables":{
-           "image_id": "image_id",
+           "image_id": "salmon.jpg",
            "ingredients": [
                "1 pound fingerling potatoes, halved lengthwise",
                "2 tablespoons olive oil",
@@ -156,7 +156,7 @@ foodrecipes = {
            ]
     },
     "Grilled Lemon-Herb Chicken":{
-        "image_id":"image_id",
+        "image_id":"grilled-chicken.jpg",
         "ingredients": [
             "6 boneless chicken breast halves (about 1 1/2 pounds total)",
             "¼ cup olive oil",
@@ -176,7 +176,7 @@ foodrecipes = {
         ]
     },
     "Oven BBQ Chicken": {
-        "image_id":"image_id",
+        "image_id":"bbq-chicken.jpg",
         "ingretients": [ 
             "3 cups your favorite BBQ sauce",
             "1/2 cups peach preserves",
@@ -197,7 +197,7 @@ foodrecipes = {
     },
 "fruits": {
     "Berry-Almond Smoothie Bowl": {
-        "image_id": "image_id",
+        "image_id": "smoothie-bowl.jpg",
         "ingredients": [
             "⅔ cup frozen raspberries",
             "½ cup frozen sliced banana",
@@ -215,7 +215,7 @@ foodrecipes = {
         ]
     },
     "Mixed Berry Smoothie": {
-        "image_id": "image_id",
+        "image_id": "berry-smoothie.jpg",
         "ingredients": [
             "1 1/2 cups apple juice can also use almond milk, skim milk, coconut milk or other flavor of juice",
             "1 banana sliced",
@@ -231,7 +231,7 @@ foodrecipes = {
     },
 
     "Fruit Salad": {
-        "image_id":"image_id",
+        "image_id":"fruit-salad.jpg",
         "ingredients":[
             "⅔ cup fresh orange juice",
             "⅓ cup fresh lemon juice",
@@ -257,7 +257,7 @@ foodrecipes = {
 },
 "diary": {
     "Triple Berry Banana Yogurt Smoothie": {
-        "image_id":"image_id",
+        "image_id":"yogurt-smoothie.jpg",
         "ingredients": [
             "8 ounces frozen mixed berries",
             "2 small bananas, peeled, cut into 2-inch pieces, and frozen",
@@ -270,7 +270,7 @@ foodrecipes = {
         ]
     },
     "Three Cheese-Vegetable Quiche": {
-        "image_id":"image_id",
+        "image_id":"cheese-veggie-quiche.jpg",
         "ingredients": [
             "1 crust from 1 box (14.1 oz) refrigerated Pillsbury™ Pie Crusts (2 Count), softened as directed on box",
             "1 tablespoon vegetable oil",
@@ -296,7 +296,7 @@ foodrecipes = {
         ]
     },
     "Yogurt and Fruit Parfaits": {
-        "image_id":"image_id",
+        "image_id":"yogurt-parfait.jpg",
         "ingredients": [
             "3 cups vanilla nonfat yogurt",
             "1 cup fresh or defrosted frozen strawberries in juice",
