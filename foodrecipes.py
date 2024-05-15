@@ -255,7 +255,7 @@ foodrecipes = {
     }
     
 },
-"diary": {
+"dairy": {
     "Triple Berry Banana Yogurt Smoothie": {
         "image_id":"yogurt-smoothie.jpg",
         "ingredients": [
