@@ -11,16 +11,44 @@ from foodrecipes import foodrecipes
 from __feature__ import snake_case, true_property
 
 app = QApplication([])
-my_list = ["Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
-list=["Palm size","1 or lower","2","3","4","5 or more"]
+list_protein = ["Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
+list_fruit=["Palm size","1 or lower","2","3","4","5 or more"]
 list_grain=["Serving","3 or lower","4","5","6","7 or more"]
 list_veg=["1 cpu raw, 1/2 cup frozen", "1 or lower","2","3","4","5 or more"]
 list_dairy=["Ounces","1","2","3","4","5 or more"]
 
+
+class AnotherAnotherWindow(QWidget):
+    def __init__(self,recipe,name ):
+        super().__init__()
+        layout = QVBoxLayout()
+
+        #self.set_layout(layout)
+        #layout=QHBoxLayout()
+        ingredient_string = ""
+        direction_string = ""
+        for ingredient in recipe["ingredients"]:
+            ingredient_string = ingredient_string + ingredient + "\n"
+
+        for direction in recipe["directions"]:
+            direction_string = direction_string + direction + "\n"
+
+        self.label1 = QLabel("\nIngredients")
+        layout.add_widget(self.label1)
+        self.label2 = QLabel(ingredient_string)
+        layout.add_widget(self.label2)
+        self.label3 = QLabel("\n" + name + "\nDirections")
+        layout.add_widget(self.label3)
+        self.label4 = QLabel(direction_string)
+        layout.add_widget(self.label4)
+
+        self.set_layout(layout)
+        layout=QHBoxLayout()
+        
+
 class Anotherwindow(QWidget):
     def __init__(self,ser_fru,ser_gra,ser_dar,ser_pro,ser_veg):
         super().__init__()
-        
         
         
         
@@ -38,18 +66,22 @@ class Anotherwindow(QWidget):
         self.set_layout(layout)
         layout=QHBoxLayout()
         
-        self.window_title = "Results"
+
+        """self.window_title = "Results"
         image_id = "smoothie-bowl.jpg"
 
         if ser_fru == "low":
             image_id = foodrecipes["fruits"]["Berry-Almond Smoothie Bowl"]["image_id"]
-        self.label=QLabel("I")
+
+        self.label=QLabel(image_id)
         self.pixmap=QPixmap(image_id)
         self.pixmap=self.pixmap.scaled(400,400,Qt.KeepAspectRatio)
         self.label.pixmap=self.pixmap
         hbox = QHBoxLayout()
         hbox.add_widget(self.label)
-        self.set_layout(hbox)
+        self.set_layout(hbox)"""
+
+        
 
 
 
@@ -71,7 +103,7 @@ class MyWindow(QWidget):
         self.my_combo_box.add_items(list_veg)
 
         self.my_combo_box2 = QComboBox(self)
-        self.my_combo_box2.add_items(my_list)
+        self.my_combo_box2.add_items(list_protein)
 
         self.my_combo_box3 = QComboBox(self)
         self.my_combo_box3.add_items(list_dairy)
@@ -80,7 +112,7 @@ class MyWindow(QWidget):
         self.my_combo_box4.add_items(list_grain)
 
         self.my_combo_box5 = QComboBox(self)
-        self.my_combo_box5.add_items(list)
+        self.my_combo_box5.add_items(list_fruit)
         
         my_btn= QPushButton('Submit')
         self.my_lbl=QLabel("")
@@ -175,19 +207,29 @@ class MyWindow(QWidget):
         ser_dar="Low"
         ser_pro="Low"
         ser_veg="Low"
-        if Fru_ser>=2:
+        if Fru_ser>=2: #referring to the number 2, in index 2
             ser_fru = "Good"
-        if Gra_ser >= 4:
+        if Gra_ser >= 2: #referring to the number 4, in index 2
             ser_gra="Good"
-        if Dar_ser>= 3:
+        if Dar_ser>= 3: #referring to the number 3, in index 3
             ser_dar="Good"
-        if pro_ser>=3:
+        if pro_ser>=2: #referring to the number 3, in index 2
             ser_pro="Good"
-        if veg_ser>=2 :
+        if veg_ser>=2 : #referring to the number 2, in index 2
             ser_veg="Good"
         
         w= Anotherwindow(ser_fru,ser_gra,ser_dar,ser_pro,ser_veg)
+        x= AnotherAnotherWindow(foodrecipes["fruits"]["Berry-Almond Smoothie Bowl"], "Berry-Almond Smoothie Bowl")
+        y = AnotherAnotherWindow(foodrecipes["vegetables"]["Veggie-Packed Okonomiyaki"], "Veggie-Packed Okonomiyaki")
+        z = AnotherAnotherWindow(foodrecipes["protein"]["Grilled Lemon-Herb Chicken"], "Grilled Lemon-Herb Chicken")
+        a = AnotherAnotherWindow(foodrecipes["dairy"]["Triple Berry Banana Yogurt Smoothie"], "Triple Berry Banana Yogurt Smoothie")
+        b = AnotherAnotherWindow(foodrecipes["grains"]["Slow-Cooker Quinoa Salad with Arugula & Feta"], "Slow-Cooker Quinoa Salad with Arugula and Feta")
         w.show()
+        x.show()
+        y.show()
+        z.show()
+        a.show()
+        b.show()
         
 
 
