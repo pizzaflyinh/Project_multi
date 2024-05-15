@@ -9,7 +9,16 @@ from pprint import pprint
 from glob import glob
 from foodrecipes import foodrecipes
 from __feature__ import snake_case, true_property
+#https://github.com/pizzaflyinh/Project_multi.git
+"""
+Course: Multimedia programming, 
+Names: Krishneet Raj, Daniel Loya, Felipe Lopez Ordaz and Carlos Fletes
+Date: May 15,2024
+Carlos, Daniel and Krishneet worked on the main. 
+Daniel and Felipe worked on the image information and id files. 
+Daniel did the image folder holding the images. All of us did review of the code to make sure it ran.
 
+"""
 app = QApplication([])
 list_protein = ["Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
 list_fruit=["Palm size","1 or lower","2","3","4","5 or more"]
