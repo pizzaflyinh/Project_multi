@@ -1,4 +1,3 @@
-
 import sys
 from PySide6.QtWidgets import (QWidget, QApplication,QPushButton,QLabel,QVBoxLayout,QComboBox, QLineEdit,QGroupBox,QHBoxLayout)
 from PySide6.QtCore import Slot
@@ -8,30 +7,60 @@ from PySide6.QtGui import Qt
 from PIL import Image
 from pprint import pprint
 from glob import glob
+from foodrecipes import foodrecipes
 from __feature__ import snake_case, true_property
 
 app = QApplication([])
-my_list = [ "Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
+my_list = ["Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
 list=["Palm size","1 or lower","2","3","4","5 or more"]
 list_grain=["Serving","3 or lower","4","5","6","7 or more"]
 list_veg=["1 cpu raw, 1/2 cup frozen", "1 or lower","2","3","4","5 or more"]
 list_dairy=["Ounces","1","2","3","4","5 or more"]
+
 class Anotherwindow(QWidget):
     def __init__(self,ser_fru,ser_gra,ser_dar,ser_pro,ser_veg):
         super().__init__()
+        
+        
+        
+        
         layout = QVBoxLayout()
-        self.label = QLabel("The Fruit serving are " + ser_fru)
-        layout.add_widget(self.label)
+        self.label6 = QLabel("The Fruit serving are " + ser_fru)
+        layout.add_widget(self.label6)
         self.label2 = QLabel("The Grain serving are " + ser_gra)
         layout.add_widget(self.label2)
-        self.label3 = QLabel("The Dariy serving are " + ser_dar)
+        self.label3 = QLabel("The Dairy serving are " + ser_dar)
         layout.add_widget(self.label3)
         self.label4 = QLabel("The Protein serving are " + ser_pro)
         layout.add_widget(self.label4)
         self.label5 = QLabel("The Veggie servings are " + ser_veg)
         layout.add_widget(self.label5)
         self.set_layout(layout)
+        layout=QHBoxLayout()
+        
         self.window_title = "Results"
+        image_id = "smoothie-bowl.jpg"
+
+        if ser_fru == "low":
+            image_id = foodrecipes["fruits"]["Berry-Almond Smoothie Bowl"]["image_id"]
+        self.label=QLabel("I")
+        self.pixmap=QPixmap(image_id)
+        self.pixmap=self.pixmap.scaled(400,400,Qt.KeepAspectRatio)
+        self.label.pixmap=self.pixmap
+        hbox = QHBoxLayout()
+        hbox.add_widget(self.label)
+        self.set_layout(hbox)
+
+
+
+
+       
+   
+
+
+
+
+        
 
 class MyWindow(QWidget):
     def __init__(self):
