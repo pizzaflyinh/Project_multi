@@ -17,9 +17,16 @@ Date: May 15,2024
 Carlos, Daniel and Krishneet worked on the main. 
 Daniel and Felipe worked on the image information and id files. 
 Daniel did the image folder holding the images. All of us did review of the code to make sure it ran.
+Abstract: The code takes in data about users daily deit and gives recmended recipes to help defiects in the diet
+in another window.
+
 
 """
 app = QApplication([])
+
+"""
+The list for data
+"""
 list_protein = ["Ounces","3 or lower", "4 ", "5 ",  "6 ", "7 or more" ]
 list_fruit=["Palm size","1 or lower","2","3","4","5 or more"]
 list_grain=["Serving","3 or lower","4","5","6","7 or more"]
@@ -31,7 +38,9 @@ class AnotherAnotherWindow(QWidget):
     def __init__(self,recipe,name ):
         super().__init__()
         layout = QVBoxLayout()
-
+"""
+The third window structure
+"""
         #self.set_layout(layout)
         #layout=QHBoxLayout()
         ingredient_string = ""
@@ -59,7 +68,9 @@ class Anotherwindow(QWidget):
     def __init__(self,ser_fru,ser_gra,ser_dar,ser_pro,ser_veg):
         super().__init__()
         
-        
+        """
+        The second window sturcture showing lows and goods
+        """
         
         layout = QVBoxLayout()
         self.label6 = QLabel("The Fruit serving are " + ser_fru)
@@ -107,7 +118,9 @@ class MyWindow(QWidget):
     def __init__(self):
         super().__init__()
         label1 = QLabel('Enter nutrient info: ')
-
+"""
+The first window structure
+"""
         self.my_combo_box = QComboBox(self)
         self.my_combo_box.add_items(list_veg)
 
@@ -206,6 +219,9 @@ class MyWindow(QWidget):
 
     @Slot()
     def on_click(self):
+        """
+        The data is transferred when submit is clicked
+        """
         veg_ser = self.my_combo_box.current_index
         pro_ser = self.my_combo_box2.current_index
         Dar_ser = self.my_combo_box3.current_index
@@ -226,7 +242,9 @@ class MyWindow(QWidget):
             ser_pro="Good"
         if veg_ser>=2 : #referring to the number 2, in index 2
             ser_veg="Good"
-        
+        """
+        Sending data into windows
+        """
         w= Anotherwindow(ser_fru,ser_gra,ser_dar,ser_pro,ser_veg)
         x= AnotherAnotherWindow(foodrecipes["fruits"]["Berry-Almond Smoothie Bowl"], "Berry-Almond Smoothie Bowl")
         y = AnotherAnotherWindow(foodrecipes["vegetables"]["Veggie-Packed Okonomiyaki"], "Veggie-Packed Okonomiyaki")
